@@ -87,7 +87,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>290</y>
+      <y>180</y>
       <width>105</width>
       <height>22</height>
      </rect>
@@ -108,7 +108,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>320</y>
+      <y>210</y>
       <width>105</width>
       <height>22</height>
      </rect>
@@ -189,6 +189,19 @@
      <string>Log:</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="updatelog">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>410</y>
+      <width>88</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>update log</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -199,8 +212,40 @@
      <height>30</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="actiongithub_com_pooriajy"/>
+   </widget>
+   <addaction name="menuMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="nr">
+   <property name="text">
+    <string>New Registeration</string>
+   </property>
+  </action>
+  <action name="rk">
+   <property name="text">
+    <string>Rotate Key</string>
+   </property>
+  </action>
+  <action name="rs">
+   <property name="text">
+    <string>Reset Settings</string>
+   </property>
+  </action>
+  <action name="actiongithub_com_pooriajy">
+   <property name="text">
+    <string>github.com/pooriajy</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

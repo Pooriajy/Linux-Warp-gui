@@ -27,8 +27,10 @@ class Ui(QtWidgets.QMainWindow):
         self.warp = self.findChild(QtWidgets.QRadioButton, 'warp')
         self.status3 = self.findChild(QtWidgets.QLabel, 'status3')
         self.logging = self.findChild(QtWidgets.QPlainTextEdit, 'log')
+        self.ul = self.findChild(QtWidgets.QPushButton, 'updatelog')
         self.pic.setPixmap(QtGui.QPixmap(("./icons/online.png")))
 
+        # self.ul.clicked.connect(self.updatelog) ## needs work
         self.conbtn.clicked.connect(self.connect)
         self.dns.toggled.connect(self.setdns)
         self.warp.toggled.connect(self.setwarp)
@@ -77,6 +79,8 @@ class Ui(QtWidgets.QMainWindow):
         if self.warp.isChecked():
             run("warp-cli set-mode warp")
 
+    def updatelog(self):
+        self.logging.setPlainText(log())
 
 
     def warpon(self):
@@ -108,6 +112,7 @@ class Ui(QtWidgets.QMainWindow):
                 self.conbtn.show()
                 self.label.setStyleSheet("color:red")
                 self.status3.setText("Disconnected")
+                self.status3.setStyleSheet("color:#f77033")
                 self.label.setText("not private")
                 self.logging.setPlainText(log())
             else:
